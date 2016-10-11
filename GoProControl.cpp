@@ -113,7 +113,7 @@ bool GoProControl::httpGET(String url) {
   client.println();
   }
   while(client.available()){
-    bool c = client.find("200 OK");
+    bool c = client.find("200 OK"); //Möjlig väg för att kunna plocka ut svarskoden?
     Serial.println(c);
   }
   return true;
